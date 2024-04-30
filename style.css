@@ -14,17 +14,17 @@
 
 header {
 	display: flex;
-	justify-content: center; 
+	justify-content: center;
 	align-items: center;
-	height: 100vh; 
+	height: 100vh;
 }
 
 header > div > h1 {
 	color: black;
 	font-size: 5rem;
-	text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5); 
+	text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
 	font-weight: bold;
-	letter-spacing: 2px; 
+	letter-spacing: 2px;
 	text-align: center;
 }
 
@@ -40,25 +40,25 @@ header > div > h1 {
 }
 
 .social a {
-	color: #333; 
+	color: #333;
 	text-decoration: none;
-	font-size: 60px; 
+	font-size: 60px;
 }
 
 .social a i {
-	color: #55acee; 
+	color: #55acee;
 }
 
 .social a:nth-child(2) i {
-	color: #0088cc; 
+	color: #0088cc;
 }
 
 .social a:last-child i {
-	color: #00bfff; 
+	color: #00bfff;
 }
 
 .social a:hover {
-	color: #666; 
+	color: #666;
 }
 
 .main-content {
@@ -78,10 +78,18 @@ header > div > h1 {
 }
 
 .content h2 {
-	font-size: 2.5rem; 
-	font-weight: bold; 
-	color: #333; 
-	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+	font-size: 2.5rem;
+	font-weight: bold;
+	color: #333;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 	margin-bottom: 20px;
-	white-space: pre-line; 
+	white-space: pre-line;
+}
+
+.content-roadmap > h3 {
+	font-size: 2rem;
+	font-weight: bold;
+	color: #333;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+	text-align: center;
 }
