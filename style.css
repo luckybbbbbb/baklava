@@ -6,10 +6,18 @@
 
 .sub-main {
 	background-color: aqua;
-	background-image: url("../images/serbia_against_the_world.jpg");
+	background-image: url("../images/trump_serbian.jpg");
 	background-size: 100%;
 	background-position: center;
 	height: 100%;
+}
+
+.buy-content {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	max-height: 80vh;
 }
 
 header {
@@ -103,8 +111,36 @@ footer {
 	position: fixed;
 	bottom: 0;
 	width: 100%;
+	background-color: #333;
+	color: white;
+	padding: 10px;
+	text-align: center;
+}
+
+.banner {
+	overflow: hidden; 
+	position: relative;
 	background-color: #333; 
-	color: white; 
-	padding: 10px; 
-	text-align: center; 
+	color: white;
+	padding: 25px; 
+	background: linear-gradient(to right, red, white, blue);
+}
+
+.banner h1 {
+	position: absolute; 
+	top: 0; 
+	left: 100%; 
+	margin: 0; 
+	white-space: nowrap;
+	animation: slideText 5s linear infinite;
+	color: black;
+}
+
+@keyframes slideText {
+	0% {
+		left: 100%;
+	} 
+	100% {
+		left: -100%;
+	} 
 }
