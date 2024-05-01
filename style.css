@@ -2,14 +2,15 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	margin-bottom: 0;
 }
 
 .sub-main {
 	background-color: aqua;
 	background-image: url("../images/trump_serbian.jpg");
-	background-size: 100%;
+	background-size: 100% 100%;
 	background-position: center;
-	height: 100%;
+	background-repeat: no-repeat;
 }
 
 .buy-content {
@@ -20,6 +21,10 @@
 	max-height: 80vh;
 }
 
+.buy-content > div:first-child {
+	overflow: auto;
+}
+
 header {
 	display: flex;
 	justify-content: center;
@@ -27,13 +32,30 @@ header {
 	height: 100vh;
 }
 
+main {
+	position: sticky;
+	top: 0;
+	z-index: 999;
+}
+
 header > div > h1 {
-	color: black;
 	font-size: 5rem;
 	text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
 	font-weight: bold;
 	letter-spacing: 2px;
 	text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+	header > div > h1 {
+		font-size: 3rem; /* Smanjujemo veličinu fonta na manjim ekranima */
+	}
+}
+
+@media screen and (max-width: 480px) {
+	header > div > h1 {
+		font-size: 2rem; /* Još više smanjujemo veličinu fonta na još manjim ekranima */
+	}
 }
 
 .hhhh {
@@ -45,6 +67,13 @@ header > div > h1 {
 	flex-direction: row;
 	width: 100%;
 	background: linear-gradient(to right, red, white, blue);
+}
+
+.main {
+	position: sticky;
+	top: 0;
+	background-color: white; /* Boja pozadine po želji */
+	z-index: 999; /* Postavljamo visoki z-indeks kako bi bili sigurni da će biti iznad ostalih sadržaja */
 }
 
 .social a {
@@ -78,7 +107,7 @@ header > div > h1 {
 }
 
 .gif {
-	height: 50vh;
+	height: calc(50vh - (padding ili margin));
 }
 
 .content {
@@ -108,8 +137,8 @@ header > div > h1 {
 }
 
 footer {
-	position: fixed;
-	bottom: 0;
+	position: relative;
+	margin-top: auto;
 	width: 100%;
 	background-color: #333;
 	color: white;
@@ -118,19 +147,19 @@ footer {
 }
 
 .banner {
-	overflow: hidden; 
+	overflow: hidden;
 	position: relative;
-	background-color: #333; 
+	background-color: #333;
 	color: white;
-	padding: 25px; 
+	padding: 25px;
 	background: linear-gradient(to right, red, white, blue);
 }
 
 .banner h1 {
-	position: absolute; 
-	top: 0; 
-	left: 100%; 
-	margin: 0; 
+	position: absolute;
+	top: 0;
+	left: 100%;
+	margin: 0;
 	white-space: nowrap;
 	animation: slideText 5s linear infinite;
 	color: black;
@@ -139,8 +168,8 @@ footer {
 @keyframes slideText {
 	0% {
 		left: 100%;
-	} 
+	}
 	100% {
 		left: -100%;
-	} 
+	}
 }
