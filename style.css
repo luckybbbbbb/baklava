@@ -6,11 +6,16 @@
 }
 
 .sub-main {
-	background-color: aqua;
 	background-image: url("../images/trump_serbian.jpg");
-	background-size: 100% 100%;
+	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 600px) {
+	.sub-main {
+		background-size: 100% 60%;
+	}
 }
 
 .buy-content {
@@ -112,6 +117,12 @@ header > div > h1 {
 
 .content {
 	text-align: center;
+}
+
+.content img {
+	width: 80%; /* Širina slike će biti 80% širine roditeljskog elementa */
+	height: auto; /* Automatski će se prilagoditi visini, zadržavajući omjer širine i visine */
+	max-height: 80vh; /* Ograničava maksimalnu visinu slike na 80% visine ekrana */
 }
 
 .content h2 {
